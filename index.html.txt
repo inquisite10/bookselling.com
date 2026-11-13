@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOW TO SCAM PEOPLE | Preet Jain</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  --bg:#090909;
+  --panel:#151515;
+  --yellow:#ffca18;
+  --red:#d83b32;
+  --white:#f5f2ed;
+  --muted:#aaa39d;
+  --line:rgba(255,255,255,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+
+.nav{
+ position:fixed;top:0;width:100%;height:78px;
+ display:flex;align-items:center;justify-content:space-between;
+ padding:0 6%;z-index:100;
+ background:rgba(8,8,8,.9);
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid var(--line)
+}
+.logo{font-weight:800;letter-spacing:3px}
+.nav-links{display:flex;gap:30px;font-size:13px;color:#ccc}
+.nav-links a:hover{color:var(--yellow)}
+.btn{
+ display:inline-flex;align-items:center;justify-content:center;
+ padding:15px 24px;background:var(--yellow);color:#090909;
+ font-size:11px;font-weight:800;letter-spacing:1.5px;
+ border:1px solid var(--yellow);cursor:pointer;transition:.25s
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px #ffca1833}
+.hamburger{display:none;background:none;border:0;color:white;font-size:25px}
+
+.hero{
+ min-height:780px;padding:150px 8% 100px;
+ display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px;
+ background:radial-gradient(ellipse at 80% 50%,#4b250d35,transparent 45%),#090909;
+}
+.eyebrow{font:11px 'DM Mono';letter-spacing:3px;color:var(--yellow)}
+h1{font-size:clamp(55px,8vw,105px);line-height:.9;letter-spacing:-5px;margin:25px 0}
+h1 span{color:var(--yellow);display:block}
+.hero-sub{font:23px 'Playfair Display';margin-bottom:18px}
+.hero-copy{max-width:480px;color:var(--muted);line-height:1.9;font-size:14px}
+.hero-actions{display:flex;gap:15px;flex-wrap:wrap;margin-top:30px}
+.secondary{background:transparent;color:white;border-color:#777}
+.hero-note{font:10px 'DM Mono';letter-spacing:2px;color:#888;margin-top:28px}
+
+.book-stage{display:flex;justify-content:center;align-items:center;perspective:1200px}
+.book{
+ width:300px;height:420px;
+ transform:rotateY(-15deg) rotateZ(-3deg);
+ box-shadow:25px 30px 40px #000;
+ transition:.5s
+}
+.book:hover{transform:rotateY(-5deg) translateY(-8px)}
+.book img{width:100%;height:100%;object-fit:cover}
+
+section{padding:100px 8%}
+.section-index{font:11px 'DM Mono';color:var(--yellow);letter-spacing:2px}
+.section-title{
+ font:clamp(36px,5vw,60px) 'Playfair Display';
+ margin:18px 0 25px;line-height:1.1
+}
+.section-intro{max-width:500px;color:var(--muted);line-height:1.8;font-size:13px}
+.section-top{margin-bottom:50px}
+.about{background:#111}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}
+.about-art{
+ min-height:390px;display:flex;align-items:center;justify-content:center;
+ border:1px solid var(--line);
+ background:radial-gradient(circle,#35260955,#101010 65%);
+}
+.about-art div{text-align:center;font:italic 30px 'Playfair Display';color:var(--yellow)}
+.about-art small{display:block;font:10px 'DM Mono';letter-spacing:2px;margin-top:20px}
+.about-copy h3{font:30px 'Playfair Display';margin-bottom:20px}
+.about-copy p{font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:16px}
+
+.inside{background:#090909}
+.chapter-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.chapter{padding:30px;min-height:190px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.chapter:hover{background:#ffca1810}
+.chapter-no{font:11px 'DM Mono';color:var(--yellow)}
+.chapter h3{font:23px 'Playfair Display';margin:25px 0 10px}
+.chapter p{font-size:12px;line-height:1.8;color:var(--muted)}
+
+.why{background:#111}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.why-card{background:#191919;border:1px solid var(--line);padding:27px;min-height:200px}
+.why-card .symbol{font-size:25px;color:var(--yellow)}
+.why-card h3{font:20px 'Playfair Display';margin:22px 0 12px}
+.why-card p{font-size:12px;line-height:1.8;color:var(--muted)}
+
+.preview{background:#090909}
+.preview-layout{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.teaser{
+ min-height:400px;padding:40px;border:1px solid #66521a;
+ background:radial-gradient(circle,#382a0c,#101010 70%);
+ display:flex;flex-direction:column;justify-content:space-between;text-align:center
+}
+.teaser h3{font-size:60px;line-height:1.1;letter-spacing:-3px}
+.teaser h3 span{color:var(--yellow)}
+.teaser p{font:italic 18px 'Playfair Display';color:#bbb}
+.teaser small{font:10px 'DM Mono';letter-spacing:2px;color:var(--yellow)}
+
+.reviews{background:#111}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{padding:28px;background:#1a1a1a;border:1px solid var(--line)}
+.review h3{font:21px 'Playfair Display';margin:20px 0}
+.review p{color:var(--muted);font-size:13px;line-height:1.8}
+
+.pricing{
+ background:radial-gradient(ellipse at center,#4a270d33,transparent 60%),#090909
+}
+.price-card{
+ max-width:900px;margin:auto;padding:40px;
+ display:grid;grid-template-columns:200px 1fr;gap:50px;
+ align-items:start;background:#171717;border:1px solid #735713
+}
+.mini-book{width:170px;height:240px}
+.mini-book img{width:100%;height:100%;object-fit:cover}
+.price{font-size:42px;font-weight:800;margin:20px 0}
+.price small{font-size:12px;color:#999;font-weight:400}
+.payment-instructions{border-top:1px solid var(--line);padding-top:20px;margin-top:20px}
+.payment-instructions h4{font:19px 'Playfair Display';margin:20px 0 10px}
+.payment-instructions p{font-size:13px;color:var(--muted);line-height:1.8}
+.qr-wrap{
+ width:280px;max-width:100%;padding:15px;background:white;
+ margin:20px 0;text-align:center;color:black;
+ font:10px 'DM Mono';letter-spacing:2px
+}
+.qr-wrap img{width:100%;display:block;margin-bottom:10px}
+.whatsapp-btn{
+ display:inline-flex;align-items:center;gap:10px;
+ background:#159b55;color:white;padding:15px 20px;
+ font-size:11px;font-weight:800;letter-spacing:1px;
+ margin-top:18px;transition:.2s
+}
+.whatsapp-btn:hover{background:#107a43;transform:translateY(-3px)}
+
+.faq{background:#111}
+.faq-list{max-width:850px;margin:auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-question{
+ width:100%;padding:23px 0;background:none;border:0;
+ color:white;text-align:left;display:flex;justify-content:space-between;
+ font:19px 'Playfair Display';cursor:pointer
+}
+.faq-answer{display:none;color:var(--muted);font-size:13px;line-height:1.8;padding-bottom:20px}
+.faq-item.open .faq-answer{display:block}
+.faq-question span:last-child{color:var(--yellow)}
+
+footer{background:#070707;padding:60px 8% 25px}
+.footer-main{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.footer-main p{color:#888;font-size:12px;line-height:1.8;max-width:350px;margin-top:15px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#aaa}
+.footer-bottom{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;color:#777;font:10px 'DM Mono'}
+
+.whatsapp-float{
+ position:fixed;right:25px;bottom:25px;z-index:99;
+ width:55px;height:55px;border-radius:50%;
+ display:grid;place-items:center;background:#159b55;color:white;
+ font-size:26px;box-shadow:0 5px 20px #0008
+}
+.reveal{opacity:1;transform:none}
+@media(max-width:800px){
+ .hero{grid-template-columns:1fr;padding-top:125px}
+ .book{width:260px;height:365px}
+ .about-grid,.preview-layout{grid-template-columns:1fr}
+ .chapter-grid{grid-template-columns:repeat(2,1fr)}
+ .why-grid{grid-template-columns:repeat(2,1fr)}
+ .price-card{grid-template-columns:1fr}
+ .mini-book{margin:auto}
+}
+@media(max-width:600px){
+ .nav{height:68px}
+ .hamburger{display:block}
+ .nav-links{
+  display:none;position:absolute;top:68px;left:0;width:100%;
+  padding:25px;background:#111;flex-direction:column;gap:22px
+ }
+ .nav-links.active{display:flex}
+ .nav>.btn{display:none}
+ .hero{padding:120px 7% 70px}
+ h1{font-size:65px}
+ section{padding:75px 7%}
+ .chapter-grid,.why-grid,.review-grid{grid-template-columns:1fr}
+ .price-card{padding:25px}
+ .teaser h3{font-size:48px}
+ .whatsapp-btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+ <a href="#home" class="logo">PREET JAIN.</a>
+ <button class="hamburger" aria-label="Toggle menu">☰</button>
+ <nav class="nav-links">
+  <a href="#home">Home</a>
+  <a href="#about">About the Book</a>
+  <a href="#inside">What's Inside</a>
+  <a href="#reviews">Why Buy</a>
+  <a href="#buy">Buy Now</a>
+ </nav>
+ <a href="#buy" class="btn">GET THE BOOK ↗</a>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+ <div>
+  <div class="eyebrow">WARNING // TRUST ISSUES AHEAD</div>
+  <h1>HOW TO <span>SCAM</span> PEOPLE</h1>
+  <p class="hero-sub">The guide you definitely can't trust.</p>
+  <p class="hero-copy">
+   A bold title. A striking cover. Fifty pages waiting to be discovered.
+   Some books are best experienced without knowing too much beforehand.
+  </p>
+  <div class="hero-actions">
+   <a href="#buy" class="btn">BUY YOUR COPY ↗</a>
+   <a href="#about" class="btn secondary">EXPLORE THE BOOK ↓</a>
+  </div>
+  <div class="hero-note">50 PAGES · BY PREET JAIN · ₹399</div>
+ </div>
+
+ <div class="book-stage">
+  <div class="book">
+   <img src="book-cover.png" alt="How to Scam People book cover">
+  </div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="section-top">
+  <div class="section-index">01 / THE BOOK</div>
+  <h2 class="section-title">A title that makes you look twice.</h2>
+  <p class="section-intro">Some books are better when you know less before opening them. This is one of those books.</p>
+ </div>
+ <div class="about-grid">
+  <div class="about-art">
+   <div>Curious yet?<small>50 PAGES · PREET JAIN</small></div>
+  </div>
+  <div class="about-copy">
+   <h3>Not everything needs a preview.</h3>
+   <p><i>HOW TO SCAM PEOPLE</i> is a 50-page book by Preet Jain with a cover that refuses to blend in.</p>
+   <p>It's compact, unusual and made to be picked up, opened and experienced for yourself. We're keeping the details under wraps so your first read stays your first read.</p>
+   <p>One thing we can share: every profit earned from the book will be donated.</p>
+   <a href="#buy" class="btn">MAKE IT YOURS ↗</a>
+  </div>
+ </div>
+</section>
+
+<section class="inside" id="inside">
+ <div class="section-index">02 / WHAT'S INSIDE</div>
+ <h2 class="section-title">That's for you to find out.</h2>
+ <p class="section-intro">We could list every detail. We'd rather leave a little room for curiosity.</p>
+
+ <div class="chapter-grid">
+  <article class="chapter"><div class="chapter-no">01 / THE EXPERIENCE</div><h3>50 Pages</h3><p>A short, easy-to-carry book from first page to last.</p></article>
+  <article class="chapter"><div class="chapter-no">02 / THE AUTHOR</div><h3>Preet Jain</h3><p>An original book with a title that does all the introducing.</p></article>
+  <article class="chapter"><div class="chapter-no">03 / THE FORMAT</div><h3>A Compact Read</h3><p>Made to be opened, read and shared.</p></article>
+  <article class="chapter"><div class="chapter-no">04 / THE DETAILS</div><h3>Best Kept Secret</h3><p>The less you know now, the more there is to discover later.</p></article>
+  <article class="chapter"><div class="chapter-no">05 / THE PURPOSE</div><h3>A Good Cause</h3><p>Every profit earned from the book will be donated.</p></article>
+  <article class="chapter"><div class="chapter-no">06 / YOUR TURN</div><h3>Take a Chance</h3><p>Some experiences are worth going into without spoilers.</p></article>
+ </div>
+</section>
+
+<section class="why">
+ <div class="section-index">03 / WHY THIS BOOK?</div>
+ <h2 class="section-title">For the curious. And the hard to surprise.</h2>
+ <div class="why-grid">
+  <article class="why-card"><div class="symbol">✦</div><h3>An Unforgettable Cover</h3><p>A bold design that stands out on a shelf and starts conversations.</p></article>
+  <article class="why-card"><div class="symbol">◉</div><h3>A Different Kind of Gift</h3><p>For friends, family and anyone who enjoys the unexpected.</p></article>
+  <article class="why-card"><div class="symbol">⌁</div><h3>A Quick, Curious Read</h3><p>Fifty pages that won't ask for a huge time commitment.</p></article>
+  <article class="why-card"><div class="symbol">♥</div><h3>More Than a Purchase</h3><p>Every profit earned from the book will be donated.</p></article>
+ </div>
+</section>
+
+<section class="preview">
+ <div class="section-index">04 / A SNEAK PEEK</div>
+ <h2 class="section-title">No spoilers. Not even a little.</h2>
+ <div class="preview-layout">
+  <div>
+   <h3 style="font:30px 'Playfair Display';margin-bottom:15px">The less we say, the better.</h3>
+   <p class="section-intro">We won't show inside pages, quote the contents or explain the surprises. We'd rather let the book introduce itself when it reaches you.</p>
+   <p class="section-intro" style="margin-top:15px">All you need to know for now: 50 pages, by Preet Jain, priced at ₹399.</p>
+   <a href="#buy" class="btn" style="margin-top:25px">GET YOUR COPY ↗</a>
+  </div>
+  <div class="teaser">
+   <small>CLASSIFIED</small>
+   <h3>THE<br>INSIDE<br><span>STAYS</span><br>INSIDE.</h3>
+   <p>Some things are more fun when you discover them yourself.</p>
+   <small>THE COVER IS ALL WE'RE SHOWING.</small>
+  </div>
+ </div>
+</section>
+
+<section class="reviews" id="reviews">
+ <div class="section-index">05 / THE GIFT</div>
+ <h2 class="section-title">A conversation starter, wrapped as a book.</h2>
+ <div class="review-grid">
+  <article class="review"><div class="chapter-no">01 / FOR FRIENDS</div><h3>For the friend who has seen every gift idea already.</h3><p>The unexpected pick.</p></article>
+  <article class="review"><div class="chapter-no">02 / FOR FAMILY</div><h3>For someone who appreciates a little curiosity and a bold cover.</h3><p>The conversation starter.</p></article>
+  <article class="review"><div class="chapter-no">03 / FOR YOURSELF</div><h3>Because sometimes the most interesting choice is the one you know least about.</h3><p>The curious reader.</p></article>
+ </div>
+</section>
+
+<section class="pricing" id="buy">
+ <div class="section-index">06 / GET YOUR COPY</div>
+ <h2 class="section-title">Make it yours.</h2>
+ <p class="section-intro">Scan the QR code below to complete your payment.</p>
+
+ <div class="price-card" style="margin-top:40px">
+  <div class="mini-book">
+   <img src="book-cover.png" alt="Book cover">
+  </div>
+  <div>
+   <div class="eyebrow">PREET JAIN · 50-PAGE EDITION</div>
+   <h2 style="font:30px 'Playfair Display';margin-top:15px">HOW TO SCAM PEOPLE</h2>
+   <p class="section-intro">A bold title. A 50-page book. Yours to discover.</p>
+   <div class="price">₹399 <small>/ copy</small></div>
+
+   <div class="payment-instructions">
+    <h4>1. Scan & Pay</h4>
+    <p>Scan this payment QR code using your preferred UPI app and complete the payment of ₹399.</p>
+
+    <div class="qr-wrap">
+     <img src="payment-qr.png" alt="Payment QR Code">
+     SCAN TO PAY · ₹399
+    </div>
+
+    <h4>2. Share your payment screenshot</h4>
+    <p>Once payment is complete, share your payment screenshot on WhatsApp so your order can be confirmed.</p>
+
+    <a class="whatsapp-btn"
+       href="https://wa.me/8104811910?text=Hello"
+       target="_blank" rel="noopener">
+       <span>●</span> I HAVE PAID — SHARE ON WHATSAPP ↗
+    </a>
+
+    <p style="margin-top:15px;font-size:11px">
+     Please attach your payment screenshot in the WhatsApp chat.
+     Your order will be confirmed after payment verification.
+    </p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="faq">
+ <div class="section-index">07 / GOOD TO KNOW</div>
+ <h2 class="section-title">The practical details.</h2>
+
+ <div class="faq-list">
+  <div class="faq-item">
+   <button class="faq-question">What is the book about?<span>＋</span></button>
+   <div class="faq-answer">It's a 50-page book by Preet Jain. We're keeping the contents and surprises undisclosed so readers can experience it without spoilers.</div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">How many pages does it have?<span>＋</span></button>
+   <div class="faq-answer">The book contains 50 pages.</div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">What is the price?<span>＋</span></button>
+   <div class="faq-answer">The listed price is ₹399. Please confirm any applicable delivery charges before purchase.</div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">Where do the profits go?<span>＋</span></button>
+   <div class="faq-answer">Every profit earned from the book will be donated.</div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">How is the book delivered?<span>＋</span></button>
+   <div class="faq-answer">Delivery format, dispatch timelines and shipping charges will be confirmed through WhatsApp.</div>
+  </div>
+  <div class="faq-item">
+   <button class="faq-question">Can I buy it as a gift?<span>＋</span></button>
+   <div class="faq-answer">Absolutely. Contact us to confirm availability and delivery arrangements.</div>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <div class="footer-main">
+  <div>
+   <div class="logo">PREET JAIN.</div>
+   <p>A 50-page book by Preet Jain. A bold cover and a reading experience best discovered for yourself.</p>
+  </div>
+  <div class="footer-links">
+   <a href="#about">About</a>
+   <a href="#inside">What's Inside</a>
+   <a href="#buy">Buy the Book</a>
+   <a href="https://instagram.com/" target="_blank">Instagram ↗</a>
+  </div>
+ </div>
+ <div class="footer-bottom">
+  © <span id="year"></span> PREET JAIN. ALL RIGHTS RESERVED.
+ </div>
+</footer>
+
+<a class="whatsapp-float"
+ href="https://wa.me/8104811910?text=Hello"
+ target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+
+<script>
+// Mobile menu
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click",()=>{
+ nav.classList.toggle("active");
+ hamburger.textContent=nav.classList.contains("active")?"×":"☰";
+});
+
+// FAQ accordion
+document.querySelectorAll(".faq-question").forEach(button=>{
+ button.addEventListener("click",()=>{
+  const item=button.closest(".faq-item");
+  const wasOpen=item.classList.contains("open");
+  document.querySelectorAll(".faq-item").forEach(row=>{
+   row.classList.remove("open");
+   row.querySelector(".faq-question span").textContent="＋";
+  });
+  if(!wasOpen){
+   item.classList.add("open");
+   button.querySelector("span").textContent="−";
+  }
+ });
+});
+
+// Current year
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
